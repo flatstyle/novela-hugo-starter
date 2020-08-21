@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: jekyll-pages
+  label: seb
+  create: all
+  match: "**/*"
 - type: directory
   path: content/post
   label: Posts
@@ -11,11 +15,11 @@ sections:
   match: "**/*"
   templates:
   - post
-- type: heading
-  label: Content
 - type: document
   path: content/_index.md
   label: Home
+- type: heading
+  label: Content
 - type: heading
   label: Data
 - type: directory
